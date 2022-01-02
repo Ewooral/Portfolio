@@ -77,6 +77,10 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
+        .swal-modal {
+        background-color: #19191ed7;
+        }
+
 /**
  * -------------------
  *  Defult CSS 
@@ -1078,6 +1082,9 @@ button:focus {
 
 .dark-vertion h6 {
   color: #fff;
+}
+.swal-text{
+  margin-top: 1rem;
 }
 
 .dark-vertion p {

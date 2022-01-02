@@ -616,7 +616,6 @@
                                         <!-- Subject Button -->
                                         <div class="btn-form col-sm-12">
                                             <button name="submit" class="btn btn-fill btn-block">Send Message</button>
-                                            <button id="greet">greet</button>
                                         </div>
                                     </div>
                                     </form>
@@ -648,22 +647,33 @@
     * JS Files *
     ==============
     --> 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-         const tryAgain = () => {
-                swal("Kindly try again.");
+         const tryAgain = (error) => {
+                swal(error);
             }
-            greet.addEventListener("click", tryAgain);
 
 
             function formSuccess(){
                swal({
-                    title: "Good job!",
-                    text: "You clicked the button!",
-                    icon: "success",
-                });                
+                    title: "Are you sure you want to submit?",
+                    text: "Once submitted, you will not be able to make changes.",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            swal("Congratulations, Message Sent. Elijah Ewooral will touch base in a Jiffy!", {
+                                icon: "success",
+                            });
+                        } else {
+                            swal("Begin a new Message");
+                        }
+                    });      
+                    $("#contactForm")[0].reset();                
+         
 
             }
              function submitMSG(valid, msg) {
@@ -690,8 +700,8 @@
                     if (message == "OK") {
                         formSuccess();
                         submitMSG();
-
                     } else{
+                        tryAgain(message)
                     }
             
                 }
