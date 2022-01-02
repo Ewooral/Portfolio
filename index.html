@@ -616,6 +616,7 @@
                                         <!-- Subject Button -->
                                         <div class="btn-form col-sm-12">
                                             <button name="submit" class="btn btn-fill btn-block">Send Message</button>
+                                            <button id="greet">greet</button>
                                         </div>
                                     </div>
                                     </form>
@@ -648,10 +649,21 @@
     ==============
     --> 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <script>
+         const tryAgain = () => {
+                swal("Kindly try again.");
+            }
+            greet.addEventListener("click", tryAgain);
+
+
             function formSuccess(){
-                alert("You have successfully sent your message")
-                 $("#contactForm")[0].reset();                
+               swal({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success",
+                });                
 
             }
              function submitMSG(valid, msg) {
@@ -678,8 +690,8 @@
                     if (message == "OK") {
                         formSuccess();
                         submitMSG();
+
                     } else{
-                        alert(message)
                     }
             
                 }
