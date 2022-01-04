@@ -633,7 +633,7 @@ ul li {
 }
 
 .img-overlay {
-  background-image: url(../images/footer-bg.png);
+  background-image: url(assets/images/footer-bg.png);
   background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -650,11 +650,11 @@ ul li {
 }
 
 .home-2-img {
-  background-image: url(../images/CEO.JPG);
+  background-image: url(assets/images/CEO.JPG);
 }
 
 .featured-img-one {
-  background-image: url(../images/CEO1.JPG);
+  background-image: url(assets/images/CEO1.JPG);
 }
 
 .featured-img-two {
@@ -662,7 +662,7 @@ ul li {
 }
 
 .map-image {
-  background-image: url(../images/map-color-overlay.png);
+  background-image: url(assets/images/map-color-overlay.png);
 }
 
 .mt-30 {
@@ -3265,7 +3265,7 @@ li .fa {
 }
 
 .home-ov-img {
-  background-image: url(../images/header-bg-2.png);
+  background-image: url(assets/images/header-bg-2.png);
   background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3681,7 +3681,7 @@ BLOG Pagination
   position: absolute;
   left: 50%;
   top: 50%;
-  background-image: url(../images/slider/status.gif);
+  background-image: url(assets/images/slider/status.gif);
   background-repeat: no-repeat;
   background-position: center;
   margin: -100px 0 0 -100px;
