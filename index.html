@@ -87,7 +87,7 @@
                                     <a class="nav-link" href="#mh-experience">Experiences</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#mh-blog">Portfolio</a>
+                                    <a class="nav-link" id="blog" href="#mh-blog">Projects</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.html#mh-pricing">Pricing</a>
@@ -468,7 +468,8 @@
            BLOG
         ===================
         -->
- <section class="mh-blog" id="mh-blog">
+ <!-- <section class="mh-blog" id="mh-blog"> -->
+<section class="mh-blog">
             <div class="container">
                 <div class="row section-separator">
                     <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
@@ -718,6 +719,10 @@
          const tryAgain = (error) => {
                 swal(error);
             }
+        const uploadSoon = () => {
+               swal("Hello, Welcome to my Project Section", "...Kindly note that my projects will be uploaded soon. Thanks for your patience.");
+            }
+        blog.addEventListener('click', uploadSoon);
 
 
             function formSuccess(){
